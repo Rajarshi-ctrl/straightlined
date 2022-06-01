@@ -1,0 +1,238 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block style %}
+
+<style>
+    .work {
+        margin: auto;
+        margin-top: 140px;
+        width: 94%;
+    }
+
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+
+    .img-container {
+        float: left;
+        width: 30%;
+        padding: 5px;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+
+
+{% endblock %}
+
+
+{% block body %}
+
+<section class="work">
+
+    <h2><strong>Our Works </strong></h2>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">3D</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Digital Painting</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokio')">Social Media Post</button>
+        <button class="tablinks" onclick="openCity(event, 'Berlin')">Visiting Card</button>
+        <button class="tablinks" onclick="openCity(event, 'Delhi')">Logo Design</button>
+        <button class="tablinks" onclick="openCity(event, 'Oslo')">Product Packaging</button>
+    </div>
+
+    <div id="London" class="tabcontent">
+        <h4><u>3D Works</u></h4>
+        <div style="padding: 20px;">
+            <div class="clearfix">
+                <div class="img-container">
+                    <a href="{% static 'images/3d/1.jpeg' %}"><img src="{% static 'images/3d/1.jpeg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/3d/2.jpeg' %}"><img src="{% static 'images/3d/2.jpeg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/3d/3.jpeg' %}"><img src="{% static 'images/3d/3.jpeg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/3d/4.jpeg' %}"><img src="{% static 'images/3d/4.jpeg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/3d/5.jpeg' %}"><img src="{% static 'images/3d/5.jpeg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <h4>Digital Painting</h4>
+        <div style="padding: 20px;">
+            <div class="clearfix">
+                <div class="img-container">
+                    <a href="{% static 'images/digital/1.jpeg' %}"><img src="{% static 'images/digital/1.jpeg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/digital/2.jpeg' %}"><img src="{% static 'images/digital/2.jpeg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/digital/3.jpeg' %}"><img src="{% static 'images/digital/3.jpeg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="Tokio" class="tabcontent">
+        <h4>Social Media Posts</h4>
+        <div style="padding: 20px;">
+            <div class="clearfix">
+                <div class="img-container">
+                    <a href="{% static 'images/social/1.jpg' %}"><img src="{% static 'images/social/1.jpg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/2.jpg' %}"><img src="{% static 'images/social/2.jpg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/3.jpg' %}"><img src="{% static 'images/social/3.jpg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/4.jpg' %}"><img src="{% static 'images/social/4.jpg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/5.jpg' %}"><img src="{% static 'images/social/5.jpg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/6.jpg' %}"><img src="{% static 'images/social/6.jpg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/7.jpg' %}"><img src="{% static 'images/social/7.jpg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/8.jpg' %}"><img src="{% static 'images/social/8.jpg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/9.jpg' %}"><img src="{% static 'images/social/9.jpg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/10.jpg' %}"><img src="{% static 'images/social/10.jpg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/11.jpg' %}"><img src="{% static 'images/social/11.jpg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/12.jpg' %}"><img src="{% static 'images/social/12.jpg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/social/13.jpg' %}"><img src="{% static 'images/social/13.jpg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Berlin" class="tabcontent">
+        <h4>Visiting Cards</h4>
+        <div style="padding: 20px;">
+            <div class="clearfix">
+                <div class="img-container">
+                    <a href="{% static 'images/cards/1.jpg' %}"><img src="{% static 'images/cards/1.jpg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/cards/2.jpg' %}"><img src="{% static 'images/cards/2.jpg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Delhi" class="tabcontent">
+        <h4>Logo Design</h4>
+        <div style="padding: 20px;">
+            <div class="clearfix">
+                <div class="img-container">
+                    <a href="{% static 'images/logo/1.jpeg' %}"><img src="{% static 'images/logo/1.jpeg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/logo/2.jpg' %}"><img src="{% static 'images/logo/2.jpg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/logo/3.jpeg' %}"><img src="{% static 'images/logo/3.jpeg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/logo/4.jpeg' %}"><img src="{% static 'images/logo/4.jpeg' %}" alt="Forest" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/logo/5.jpeg' %}"><img src="{% static 'images/logo/5.jpeg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Oslo" class="tabcontent">
+        <h4>Product Packaging</h4>
+        <div style="padding: 20px;">
+            <div class="clearfix">
+                <div class="img-container">
+                    <a href="{% static 'images/product/1.jpeg' %}"><img src="{% static 'images/product/1.jpeg' %}" alt="Italy" style="width:100%"></a>
+                </div>
+                <div class="img-container">
+                    <a href="{% static 'images/product/2.png' %}"><img src="{% static 'images/product/2.png' %}" alt="Forest" style="width:100%"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+{% endblock %}

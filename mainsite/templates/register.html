@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Training</title>
+  {% load static %}
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+<a href="/index" class="logo"><i class="fas fa-graduation-cap"></i></a>
+
+<nav class="navbar">
+    <ul>
+        <div class="dropdown" style="padding-right: 10px;">
+            <button class="dropbtn">Training
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Internship</a>
+                <a href="#">Implant Training</a>
+                <a href="#">Soft Skills</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">User
+                <i class="fa fa-user" style="font-size:20px"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/index/login">Log In</a>
+                <a href="/index/register">Sign Up</a>
+            </div>
+        </div>
+    </ul>
+</nav>
+
+</header>
+
+
+<div id="login-box">
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert {{ message.tags }}" role="alert">
+        <strong>{{ message.tags }}</strong> {{ message }}
+        </div>
+    {% endfor %}
+    {% endif %}
+    <div class="left">
+      <h1>Sign up</h1>
+
+     <form action="/index/register/" method="post">   {% csrf_token %}
+        <input type="text" name="name" placeholder="Username" />
+        <input type="text" name="email" placeholder="E-mail" />
+        <input type="password" name="password" placeholder="Password" />
+        <input type="password" name="password2" placeholder="Retype password" />
+        
+        <input type="submit" name="signup_submit" value="Sign me up" />
+     </form>
+    </div>
+    
+    <div class="right">
+      <span class="loginwith">Sign in with<br />social network</span>
+      
+      <button class="social-signin facebook">Log in with facebook</button>
+      <button class="social-signin twitter">Log in with Twitter</button>
+      <button class="social-signin google">Log in with Google+</button>
+    </div>
+    <div class="or">OR</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="{% static 'script.js' %}"></script>
+
+    
+</body>
+</html>

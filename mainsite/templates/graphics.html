@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block style %}
+
+<style>
+    .welcome {
+        padding-top: 140px;
+    }
+
+    .button1 {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #2580c1fa;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 18px;
+        padding: 8px;
+        width: 230px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .button1 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button1 span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .button1:hover span {
+        padding-right: 20px;
+    }
+
+    .button1:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+<div class="welcome">
+    <div style="float: right;">
+        <img style="width: 350px;" src="{% static 'images/course/graphics.jpeg' %}">
+    </div>
+    <div style="margin: auto; padding: 0px 30px;">
+        <h2><b>Graphics & Web Design</b></h2>
+        <p style="font-family: Georgia;">Website and graphic design share a similar creative space. Both involve the artistry of crafting visuals.
+            But while web design is a medium, where ongoing changes and updates a part of any project, graphic
+            design is about creating visuals with longevity. Graphic design skills will round out your skill set.
+            Knowing how to create hand-drawn typography,custom illustrations and other type of creative flourishes
+            will enhance your web design work.
+        </p>
+        <h3><b>We covered :</b></h3>
+        <ul>
+            <li>Adobe photoshop </li>
+            <li>Adobe illustrator</li>
+            <li>Adobe indesign</li>
+            <li>Adobe XD </li>
+            <li>Coreldraw</li>
+            <li>Adobe Pagemaker</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuMD30RWTGCXKDpM84hRCwaqJl7drD0wQbASgT7nQQzWDClQ/viewform">
+            <button class="button1" style="vertical-align:middle"><span>Wanna Learn? </span></button>
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

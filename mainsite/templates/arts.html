@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block style %}
+
+<style>
+    .welcome {
+        padding-top: 140px;
+    }
+
+    .button1 {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #2580c1fa;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 18px;
+        padding: 8px;
+        width: 230px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .button1 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button1 span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .button1:hover span {
+        padding-right: 20px;
+    }
+
+    .button1:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+<div class="welcome">
+    <div style="float: right;">
+        <img style="width: 350px;" src="{% static 'images/course/art.jpeg' %}">
+    </div>
+    <div style="margin: auto; padding: 0px 30px;">
+        <h2><b>Art & Craft</b></h2>
+        <p style="font-family: Georgia;">Arts and Crafts as a subject in the school curriculum are typically taken for granted as a must for
+            children and young kids in the formal education setup. There is no doubt that arts and crafts are fun
+            activities for kids. Be it colouring with crayons, water colour painting or designing a handmade
+            birthday card,can enhance the interest of the children and exploit their artistic potential.
+        </p>
+        <h3><b>We covered :</b></h3>
+        <ul>
+            <li>Drawing Techniques for Beginners</li>
+            <li>Hatching</li>
+            <li>Cross Hatching</li>
+            <li>Scribble</li>
+            <li>Blending</li>
+            <li>Watercolor drawing</li>
+            <li>Acrylic painting</li>
+            <li>Oil painting</li>
+            <li>Various craft work</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuMD30RWTGCXKDpM84hRCwaqJl7drD0wQbASgT7nQQzWDClQ/viewform">
+            <button class="button1" style="vertical-align:middle"><span>Wanna Learn? </span></button>
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}
