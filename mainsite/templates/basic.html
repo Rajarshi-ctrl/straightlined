@@ -5,8 +5,22 @@
 {% block style %}
 
 <style>
+    body {
+        background-image: url("{% static 'images/bg1.jpg' %}");
+    }
+
     .welcome {
-        padding-top: 140px;
+        padding: 120px 40px 0px 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .text {
+        padding-left: 40px;
+    }
+
+    .images{
+        width: 460px; 
     }
 
     .button1 {
@@ -59,6 +73,21 @@
         p, ul {
             font-size: 1.5rem;
         }
+        .images{
+            width: 320px; 
+        }
+        .welcome {
+            margin: auto;
+            padding: 100px 20px 0px 20px;
+            display: grid;
+        }
+        .pho{
+            margin: auto;
+            display: block;
+        }
+        .text {
+            padding: 0px;
+        }
     }
 
 </style>
@@ -69,10 +98,10 @@
 {% block body %}
 
 <div class="welcome">
-    <div style="float: right;">
-        <img style="width: 350px;" src="{% static 'images/course/computer.jpeg' %}">
+    <div class="pho">
+        <img class="images" src="{% static 'images/course/computer.jpeg' %}">
     </div>
-    <div style="margin: auto; padding: 0px 30px;">
+    <div class="text">
         <h2><b>Basic Computer</b></h2>
         <p style="font-family: Georgia;">Basic computer knowledge is about how computers work and how to use them.This may include typing,learning
             keyboard commands, knowing how to connect and disconnect the internet to a computer.whether you are a
